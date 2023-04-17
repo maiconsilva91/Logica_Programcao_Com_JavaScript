@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <script src="javascript.js"></script>
+    <style>
+        #output {
+            font-size: 1.3em;
+            font-weight: 300;
+            border: 1px solid #000;
+            padding: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 031</h2>
+
+    <div id="output"></div>
+
+    <script>
+
+        //Objetos e propriedade de objetos
+
+        var caneta = new Object();
+        caneta.nome = "Caneta";
+        caneta.preco = 2;
+        caneta.quantidade = 99;
+
+        caneta.comprar = function() {
+            console.log('Comprou caneta');
+            console.log(this.quantidade);
+        }
+
+        var borracha = new Object();
+        borracha.nome = "Borracha";
+        borracha.preco = 1.89;
+        borracha.quantidade = 57;
+
+        borracha.comprar = function() {
+            console.log('Comprou caneta');
+            this.quantidade--;
+            console.log(this.quantidade);
+        }
+
+        var lapis = new Object();
+        lapis.nome = "Lápis";
+        lapis.preco = 1.2;
+        lapis.quantidade = 31;
+
+        lapis.comprar = function(qtd) {
+            if(!qtd){
+                qtd = 1;
+            }
+            console.log('Comprou caneta');
+            this.quantidade = this.quantidade - qtd;
+            console.log(this.quantidade);
+        }
+
+        var msg = '';
+
+        msg += 'Nome: ' + caneta.nome + '<br>';
+        msg += 'Preço: R$ ' + caneta.preco + '<br>';
+        msg += 'Quantidade: ' + caneta.quantidade + '<br>' + '<hr>';
+        
+        msg += 'Nome: ' + borracha.nome + '<br>';
+        msg += 'Preço: R$ ' + borracha.preco + '<br>';
+        msg += 'Quantidade: ' + borracha.quantidade + '<br>' + '<hr>';
+
+        msg += 'Nome: ' + lapis.nome + '<br>';
+        msg += 'Preço: R$ ' + lapis.preco + '<br>';
+        msg += 'Quantidade: ' + lapis.quantidade + '<br>';
+
+        document.querySelector('#output').innerHTML = msg;
+    </script>
+</body>
+</html>

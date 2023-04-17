@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+
+    <style>
+        div#output {
+            font-size: 2em; 
+            border: 1px solid #000;
+            margin-top: 5px;
+            text-align: center;
+            height: 35px;
+            width: 95px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 025</h2>
+
+    <!-- Botões de operações-->
+    <button onclick="inciarCalculo('+')"> + </button>
+    <button onclick="inciarCalculo('-')"> - </button>
+    <button onclick="inciarCalculo('*')"> * </button>
+    <button onclick="inciarCalculo('/')"> / </button>
+
+    <!-- Div onde vai aparecer o resultado -->
+    <div id="output"></div>
+
+    <script>
+        
+        var num_1 = parseFloat(prompt('Digite um número'));// Primeiro número
+        
+        escreve(num_1);//Chama a função "escrever" que mostra o resultado dentro da div #output
+
+        //Função "iniciarCalculo" é acionada quando clicar em algum dos botões de operações  
+        function inciarCalculo(simbolo_1){
+
+            var n1 = document.querySelector('#output').textContent;//Armazena o texto da div output que é o valor de variável num_1 
+            n1 = parseFloat(n1);//Precisa p/ operação de somar, senão é concatenado os dois valores. Valor da div esta em caracteres e precisa ser transformada em número.
+
+            var n2 = parseFloat(prompt('Digite outro número: '));// Segundo número
+
+            var msg = calcular(simbolo_1, n1, n2);//Chama a função "calcular" e as variáveis n1 e n2.
+
+            escreve(msg);//chama a função "escrever" que mostra o resultado dentro da div #output
+        }
+
+        //Parâmetro é um parâmetro mensagem
+        function escreve(mensagem) {
+            var output = document.querySelector('#output').innerHTML = mensagem;
+        }
+
+        //Simbolo, valor1, valor2 são parâmetros da função calcular
+        function calcular(simbolo_2, valor1, valor2) {
+
+            var numeroCalculado = null;
+            //null = valor nulo
+
+            switch(simbolo_2) {
+                case '+':
+                    numeroCalculado = valor1 + valor2;
+                    break;
+                case '-':
+                    numeroCalculado = valor1 - valor2;
+                    break;
+                case '*':
+                    numeroCalculado = valor1 * valor2;
+                    break;
+                case '/':
+                    numeroCalculado = valor1 / valor2;
+            }
+
+            return numeroCalculado;
+            //Retorna o resultado da operação
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <script src="javascript.js"></script>
+    <style>
+        #output {
+            font-size: 1.3em;
+            font-weight: 300;
+            border: 1px solid #000;
+            padding: 10px;
+            line-height: 0.5em;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 031</h2>
+
+    <div id="output"></div>
+
+    <script>
+
+        // Array de Objetos
+        //[Array {Objetos}]
+        //Array de Objetos - Conjuntos de dados({}), agrupados dentro de um array([])
+        var produtos = [
+            {"nome": "Caneta", "preco": 2, "estoque": 87}, 
+            {"nome": "Lapis", "preco": 1.29, "estoque": 49},
+            {"nome": "Borracha", "preco": 0.9, "estoque": 32}
+        ];  
+        
+        var msg = '';
+
+        for(var i = 0; i < produtos.length; i++) {
+            console.log(produtos[i]);
+            //ou console.log(produtos[i].nome);
+            //ou console.log(produtos[i].preco);
+
+            msg += "<h3>Produto: " + produtos[i].nome + "</h3>";
+            msg += "<p>Preço: R$ " + produtos[i].preco + "</p>";
+            msg += "<p>Estoque: R$ " + produtos[i].estoque + "</p>" + "<hr>";
+        }
+        
+        document.querySelector("#output").innerHTML = msg;
+    </script>
+</body>
+</html>

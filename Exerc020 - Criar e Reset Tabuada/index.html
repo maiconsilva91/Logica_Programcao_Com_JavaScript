@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 020</h2>
+    <h3></h3>
+
+    <div id="output"></div>
+
+    <br>
+
+    <!-- Botão para criar uma nova tabuada -->
+    <button onclick="criar()">Criar Tabuada</button>
+
+    <!-- Botão para limpar a tela -->
+    <button onclick="reset()">Reset Tabuada</button>
+
+<script>
+
+    function criar() {
+        //perguntar um número ao usuário
+        var tabuada_1 = parseInt(prompt("Digite um número para saber a tabuada de multiplicação: "));
+
+        //perguntar ao usuário até que número ele quer multiplicar
+        var vezesNumb = parseInt(prompt("Até que número deseja multiplicar: "))
+
+        //seleciona e modifica a div#output
+        var output = document.querySelector('#output');
+        
+        vezesNumb = vezesNumb + 1;
+
+        var mostraNaDiv = '';
+
+        //Loop For
+
+        //condições
+        for(var i = 1; i < vezesNumb; i++) {
+            
+            //concatenação
+            mostraNaDiv += tabuada_1 + ' x ' + i + ' = ' + (tabuada_1 * i) + '<br>'
+        }
+
+        //Modifica h3
+        var mudarH3 = document.querySelector('h3');
+        mudarH3.innerHTML = "<p>" + 'Tabuada do Número: ' + tabuada_1 + '</p>';
+        mudarH3.style.textDecoration = "underline";
+
+        //mostra a tabuada dentro da div e na tela
+        output.innerHTML = mostraNaDiv;
+
+    } 
+    
+    output.innerHTML = mostraNaDiv;
+    
+    //Função Void - Funções que não retornam nenhum valor. São úteis quando queremos reaproveitar código.
+    //Apagar tabuada  
+    function reset() {
+        mostraNaDiv = '';
+    }
+
+/* var output = document.querySelector('#output');
+
+    var mensagem = '';
+    for(var i = 0; i < 20; i++) {
+
+        mensagem += 'i: ' + i + '<br>'
+    }
+
+    output.innerHTML = mensagem;
+ */
+    //Muda a cor de h1 para vermelho
+    var mudarH1 = document.querySelector('h1');
+    mudarH1.style.color = "#f00";
+</script>
+
+</body>
+</html>

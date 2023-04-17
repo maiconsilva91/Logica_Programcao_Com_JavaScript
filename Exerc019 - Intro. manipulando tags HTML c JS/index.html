@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 019</h2>
+
+    <div id="output">test</div>
+
+    <script>
+        var output = document.querySelector('#output');
+
+        var mensagem = '';
+        for(var i = 0; i < 20; i++) {
+
+            mensagem += 'i: ' + i + '<br>'
+        }
+
+        output.innerHTML = mensagem;
+    </script>
+
+    <!-- <script>
+        var output = document.querySelector('#output');
+        var output_h1 = document.querySelector('h1');
+
+        console.log(output);
+
+        output.innerHTML = "Javascript inject";
+
+        output_h1.style.color = "#f00";
+        
+    </script> -->
+</body>
+</html>

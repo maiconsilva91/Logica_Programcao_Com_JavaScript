@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+
+    <style>
+        div#output {
+            font-size: 2em; 
+            border: 1px solid #000;
+            margin-top: 5px;
+            text-align: center;
+            height: 35px;
+            width: 95px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 023 </h2>
+
+    <button onclick="calcular('+')"> + </button>
+    <button onclick="calcular('-')"> - </button>
+    <button onclick="calcular('*')"> * </button>
+    <button onclick="calcular('/')"> / </button>
+
+    <div id="output"></div>
+
+    <script>
+        
+        var n1 = prompt('Digite um número');
+        n1 = parseFloat(n1);
+
+        //Função 'escreve' pega 'n1' e mostra na 'div output' - Escopo Global
+        escreve();
+
+        function escreve() {
+            var output = document.querySelector('#output');
+            output.innerHTML = n1;
+        }
+
+        function calcular(operation) {
+            var n = parseFloat(prompt("Digite outro número"));
+
+            /* Como eu resolvi
+            if(operation == '+') {
+                n1 += n;
+            } if(operation == "-") {
+                n1 -= n;
+            } if(operation == '*') {
+                n1 *= n; 
+            } if(operation == '/') {
+                n1 /= n;
+            } 
+            */
+
+            //Como o professor resolveu: Serliv
+            switch (operation) {
+                case '+':
+                    n1 += n;
+                    break;
+                case '-':
+                    n1 -= n;
+                    break;
+                case '*':
+                    n1 *= n;
+                    break;
+                case '/':
+                    n1 /= n;
+            }
+
+            escreve();
+        }
+
+    </script>
+</body>
+</html>

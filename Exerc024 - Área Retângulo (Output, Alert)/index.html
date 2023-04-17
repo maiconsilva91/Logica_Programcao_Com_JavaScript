@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <script src="javascript.js"></script>
+
+    <style>
+        div#output {
+            font-size: 1.5em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 024</h2>
+
+    <button onclick="mostraAreaOutput()">Área do Retângulo: Output</button>
+    <button onclick="mostraAreaAlert()">Área do Retângulo: Alert</button>
+    <!-- Os parâmetro estão dentro dos parênteses  -->
+
+    <div id="output"></div>
+
+    <script>
+                            
+        function mostraAreaOutput() {
+
+            var largura = parseInt(prompt("Digite a Largura: "));
+
+            var altura = parseInt(prompt("Digite a Altura: "));
+
+            var area = calcularArea(largura, altura);
+            document.querySelector('#output').innerHTML = 'Área total: ' + area + 'm²';
+        }
+
+        function mostraAreaAlert() {
+
+            var largura = parseInt(prompt("Digite a Largura: "));
+
+            var altura = parseInt(prompt("Digite a Altura: "));
+
+           var area = calcularArea(largura, altura);
+           alert('Área total: ' + area + 'm²');
+        }
+
+        function calcularArea(l, a) {
+           return l * a;
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

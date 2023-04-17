@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <script src="javascript.js"></script>
+    <style>
+        #output {
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 029</h2>
+
+    <script>
+
+        var diasDaSemana = new Array('Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado')
+
+        var hoje = new Date();
+        var diaNumero = hoje.getDay();
+
+        alert('Bem-Vindo, hoje é ' + diasDaSemana[diaNumero]);
+        
+    </script>
+</body>
+</html>

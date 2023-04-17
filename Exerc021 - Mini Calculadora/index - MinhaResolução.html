@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <script src="javascript.js"></script>
+
+    <style>
+        div#calculo {
+            font-size: 2em; 
+            border: 1px solid #000;
+            margin-top: 5px;
+            text-align: center;
+            height: 35px;
+            width: 95px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de Programação com Javascript</h1>
+    <h2>Exercício 021</h2>
+
+    <button onclick="soma()"> + </button>
+    <button onclick="subtracao()"> - </button>
+    <button onclick="multiplicacao()"> * </button>
+    <button onclick="divisao()"> / </button>
+
+    <div id="calculo"></div>
+
+    <script>
+        //Seleciona a div com id calculo
+        var calc = document.querySelector('#calculo');
+
+        //Pede para o usuário digitar um número
+        var numResultado = parseFloat(prompt("Digite um número: "));
+
+        //Mostra o resultado dentro da div com id calculo
+        calc.innerHTML = numResultado;
+
+        //Função para Somar
+        function soma() {
+
+            //Pede para o usuário digita um outro número
+            var numeroSoma = parseFloat(prompt("Digite outro numero: "))
+
+            //Calculo somar
+            numResultado = (numResultado + numeroSoma)
+            
+            //Mostra o resultado dentro da div com id calculo
+            calc.innerHTML = numResultado;
+        }
+        
+        //Função para Subtrair
+        function subtracao() {
+
+            //Pede para o usuário digita um outro número
+            var numeroSubtracao = parseFloat(prompt("Digite outro numero: "))
+
+            //Calculo subtrair
+            numResultado = (numResultado - numeroSubtracao)
+            
+            //Mostra o resultado dentro da div com id calculo
+            calc.innerHTML = numResultado;
+        }
+        
+        //Função para Multiplicar
+        function multiplicacao() {
+
+            //Pede para o usuário digita um outro número
+            var numeroMultiplicacao = parseFloat(prompt("Digite outro numero: "))
+
+            //Calculo multiplicar
+            numResultado = (numResultado * numeroMultiplicacao)
+            
+            //Mostra o resultado dentro da div com id calculo
+            calc.innerHTML = numResultado;
+        }
+        
+        //Função para Dividir
+        function divisao() {
+
+            //Pede para o usuário digita um outro número
+            var numeroDivisao = parseInt(prompt("Digite outro numero: "))
+
+            //Calculo dividir
+            numResultado = (numResultado / numeroDivisao)
+            
+            //Mostra o resultado dentro da div com id calculo
+            calc.innerHTML = numResultado;
+        }
+
+    </script>
+</body>
+</html>
